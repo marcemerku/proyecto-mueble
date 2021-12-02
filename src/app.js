@@ -3,7 +3,7 @@ const app=express();
 const routes= require('./routes/tiendaRoutes');
 const path= require('path');
 const databaseConnection= require('../config/database')
-const port=porcess.env.PORT || 3000;
+const port= process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
@@ -23,5 +23,5 @@ app.use(express.static(path.join(__dirname,'public')));
 app.use("",routes);
 
 app.listen(port,()=>{
-    console.log("Server corriendo en puerto ${port}")
-})
+    console.log(`Server corriendo en puerto ${port}`)
+});
