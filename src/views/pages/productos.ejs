@@ -2,19 +2,12 @@
 <html lang="en">
 <head>
     <%-include('../partials/head') %>
-
 </head>
 <body>
+    <%-include('../partials/nav') %>
 
-    <nav>
-        <a href="/tienda/"><img src="/imagenes/logo.svg" alt="logo Tienda Mueble"></a>
-        <ul class="menu">
-            <li class="item-menu"><a class="item-link" href="/tienda/productos">Productos</a></li>
-            <li class="item-menu"><a class="item-link" href="/tienda/nuevoProducto">Agregar Producto</a></li>
-        </ul>
-    </nav>
     <main class="cont-padre">
-        <% data.forEach((prod)=>{%>
+      <% data.forEach((prod)=>{%>
             <div class="card card-prod">
                 <h2 class="titulo-prod"><%= prod.producto%></h2>
                 <img class="img-card img-prod" src="<%=prod.imagen%>" alt="<%= prod.producto%>">
@@ -22,7 +15,8 @@
                 <p><%= prod.precio%></p>
                 <a class="boton-ver"href="#">Comprar</a>
             </div>
-        <%})%>
+    <% }) %>
+
     </main >
     
 
